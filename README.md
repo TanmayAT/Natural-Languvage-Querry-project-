@@ -64,14 +64,9 @@ This is a basic implementation to showcase core functionalities. Potential areas
 * Integrating with a graphical user interface for a more interactive experience.
 * Implementing a robust deployment system for scalability.
 
-**License:**
 
-This project is distributed under the MIT License (refer to LICENSE file).
 
 **Credits:**
 
 * Souvik Sen (Ema Intern Take-Home Challenge Inspiration)
 
-**Contributing:**
-
-Feel free to fork this repository and contribute your improvements. We welcome pull requests for bug fixes, feature enhancements, and documentation updates.
