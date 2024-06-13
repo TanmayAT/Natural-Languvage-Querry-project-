@@ -1,0 +1,66 @@
+Natural Language Query Agent Flowchart
+
+This document outlines the workflow for a Natural Language Query Agent using open-source libraries and pre-trained models.
+
+Components:
+
+1. Data Preprocessing
+    - Source: Stanford LLMs Lecture Notes (select 3-4 lectures) and LLM Architectures table.
+    - Processing:
+        - Lecture Notes:
+            - Extract text content
+            - Organize by lecture topic
+            - Optionally: Preprocess text (lowercase, remove stop words)
+        - LLM Architectures:
+            - Extract model names, papers, and relevant details from the table.
+
+2. Intermediary Representation
+    - Lecture Notes:
+        - Represent each lecture as a separate document or store in a key-value structure with topic as the key.
+        - Optionally, consider using sentence embeddings to capture semantic relationships within the lecture.
+    - LLM Architectures:
+        - Store as a structured data format like a dictionary or a Pandas DataFrame. Each entry can include model name, paper link, and relevant details.
+
+3. Vector Indexing
+    - Use an open-source vector indexing library like `faiss` or `llama-index` to create indexes for both lecture notes and LLM architectures data.
+    - Indexing allows for efficient retrieval of relevant information based on user queries.
+
+4. User Query Processing
+    - User submits a natural language question.
+    - Preprocess the query (lowercase, remove stop words) to match the preprocessed data.
+
+5. Information Retrieval
+    - Leverage the vector indexes to search for relevant passages from the lecture notes and LLM architectures data.
+    - Retrieval can happen based on keyword matching or semantic similarity (using sentence embeddings).
+
+6. Answer Synthesis
+    - Use a pre-trained large language model (LLM) through an API call (e.g., Bard, Jurassic-1 Jumbo) to generate a conversational answer.
+    - The LLM input should include the user query and retrieved information from the lecture notes and LLM architectures data.
+    - Optionally, incorporate techniques like highlighting or summarizing relevant sections from the retrieved data.
+
+7. Response Generation
+    - Format the LLM output into a user-friendly response, ensuring it addresses the user's query.
+
+8. (Bonus) Conversational Memory
+    - Maintain a dialogue history to allow for contextually aware follow-up questions. 
+    - You can explore techniques like session state management for remembering past interactions.
+
+9. (Bonus) Reference Citing
+    - Identify sections from the lecture notes used in the answer composition.
+    - You can achieve this by keeping track of retrieved document IDs during information retrieval.
+
+10. (Bonus) Conversational Summary
+    - After a series of questions and answers, generate a summary of the conversation for the user.
+    - This might involve summarizing key points or creating flashcards using past interactions.
+
+
+Pushing to GitHub:
+
+1. Create a new repository on GitHub.
+2. Create a README file explaining your approach, libraries used, and instructions to run the code.
+3. Push your codebase (including all Python files, requirements.txt, and other relevant data) to the repository.
+4. Add Souvik Sen (@souvik-sen) as a collaborator.
+
+Note:
+
+This document lays out a general workflow. Specific implementations may vary depending on the chosen libraries and desired functionalities.
