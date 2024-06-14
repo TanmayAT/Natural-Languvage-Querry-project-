@@ -24,9 +24,9 @@ This repository contains the code for a Natural Language Query Agent built to an
 
 **Technical Stack:**
 
-* Python 3.x
+* Python 3.11
 * Libraries (may vary based on implementation):
-    * langchain (or similar) for data processing and vector indexing
+    * langchain  for data processing and vector indexing
     * faiss or llama-index for vector indexing
     * Pre-trained LLM API (e.g., Bard, Jurassic-1 Jumbo) for answer synthesis
     * Additional libraries for data manipulation and text processing (e.g., pandas, nltk)
@@ -36,12 +36,12 @@ This repository contains the code for a Natural Language Query Agent built to an
 1. Clone this repository.
 2. Install the required libraries:
    ```bash
-   pip install -r requirements.txt
+   pip install -r req.txt
    ```
 3. (Optional) Download and configure the pre-trained LLM API you plan to use (refer to their documentation).
 4. Run the main script:
    ```bash
-   python main.py
+   streamlit run main.py
    ```
 
 **Demo:**
